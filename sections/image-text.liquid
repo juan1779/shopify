@@ -1,0 +1,29 @@
+<div class="container">
+    <div>
+        <img src="{{section.settings.image}}" alt="{{section.settings.image.alt}}">
+    </div>
+    <div>
+        <h3>{{ section.settings.inline-richtext.title }}</h3>
+        <p>{{ section.settings.inline-richtext.paragraph }}</p>
+    </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "image-text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen"
+    },
+    {
+      "type": "richtext",
+      "id": "inline-richtext",
+      "label": "Texto enriquecido en línea",
+      "info": "Agrega un título y un párrafo"
+    }
+  ]
+}
+{% endschema %}
